@@ -325,11 +325,11 @@ Once we save (Cmd-S, Ctrl-S, or File->Save), we should be able to run our progra
 8
 ```
 
-Let's try to understand this code. We first initialized variables *a* and *b* to the values 0 and 1, respectively. (In  practice, such uninformative variable names are bad practice. But for our simple use-case here they will work). These variables now represent the first two entries in the Fibonacci Sequence. 
+Let's try to understand this code. We first initialized variables *a* and *b* to the values 0 and 1, respectively. (In general, using uninformative variable names such as these is bad practice. But for our simple use-case here they will work). These variables now represent the first two entries in the Fibonacci Sequence. 
 
 ```while``` - while begins our loop. Lines 3 and 4 are inside this loop. Python uses indentation to nest together different lines of code. Here, any lines with a single indent under line 2 will become part of the while loop. To write code outside of this loop, all we need to to is un-indent.
 
-Loops use *conditions* to determine whether they should run again. Otherwise, they would just run forever in an *infinite loop* . Try replacing line 2 with ```while True:``` and run your code again with ```python3 fib.py``` (remember to save). You should get the following error:
+Loops use *conditions* to determine whether they should run again. Otherwise, they would just run forever in an *infinite loop* . Try replacing line 2 with ```while True:``` and run your code again with ```python3 fib.py``` (remember to save before running your code). You should get the following error:
 
 ```console
 % python3 fib.py
@@ -543,8 +543,67 @@ Give the program a run.
 
 
 <div class="primer-spec-callout info" markdown="1">
-Now may be a good time to push to git! Take a look at the [Version Control](https://rohan-agr.github.io/cantor-p1/#version-control---git) section if you need a refresher.
+Remember to push to git! Take a look at the [Version Control](https://rohan-agr.github.io/cantor-p1/#version-control---git) section if you need a refresher.
 </div>
+
+
+### Documenting Our Code
+
+In python, it is good practice to use *docstrings* at the beginning of any functions, classes, or modules to describe their intended functions. This has numerous benefits, including making code more legible and allowing you to quickly bring a collaborator up to speed on your work. Let's add docstrings to the beginning of our file and function by wrapping them in triple-quotation marks.
+
+```python
+"""Fibonacci Number Generator."""
+
+def main():
+    """Takes in user input, returns Fibonacci Numbers."""
+    num_terms = input("Enter number of Fibonacci terms: ")
+    valid = num_terms.isnumeric()
+
+    if valid:
+        num_terms = int(num_terms)
+        a, b = 0, 1
+        for i in range(0, num_terms):
+            print(a)
+            a, b = b, a+b
+            i += 1
+    else:
+        print("Invalid input. Input must be a numeric value.")
+
+
+main()
+
+```
+
+Additionally, it is good practice to add *comments* to our code, to provide explanation for what smaller code blocks do. In python, we do this by starting that line with a ```# ```. Lines beginning with a hash mark will not be read as a line of code at runtime, but are intended to be plain english for readers of the code.
+
+
+```python
+"""Fibonacci Number Generator."""
+
+def main():
+    """Takes in user input, returns Fibonacci Numbers."""
+    num_terms = input("Enter number of Fibonacci terms: ")
+
+    # Validates input - checks that the input is a non-negative number
+    valid = num_terms.isnumeric()
+
+    if valid:
+        num_terms = int(num_terms)
+        a, b = 0, 1
+
+        # Loop iterates for the requested number of terms
+        for i in range(0, num_terms):
+            print(a)
+            a, b = b, a+b
+            i += 1
+    else:
+        print("Invalid input. Input must be a numeric value.")
+
+
+main()
+
+```
+
 
 ## Acknowledgements
 
