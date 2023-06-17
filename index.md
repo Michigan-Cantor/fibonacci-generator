@@ -96,7 +96,7 @@ At this point, your Cantor directory should look something like this. Use the *t
 
 That was a lot of setup. Let's start coding.
 
-[Python Tutorial] (https://docs.python.org/3/tutorial/index.html)
+[Python Tutorial](https://docs.python.org/3/tutorial/index.html)
 
 
 The Python interpreter allows us to experiment with simple code in a very basic environment. We'll use it as we go through the Python tutorial and pick up some beginner programming concepts. Start it up in your terminal with the *python3* command:
@@ -233,6 +233,11 @@ IndexError: list index out of range
 ```
 
 *Using 0-based indexing, the 7th index in this list would refer to the eight item. This list only has stores seven values, so attempting to read index 7 results in an error*.
+
+At this point, we have covered many of the important beginniner concepts, but there is still much more to Python. Use the tutorials here to learn more programming tools:
+
+[Python Tutorial - W3Schools (Recommended)](https://www.w3schools.com/python/python_getstarted.asp)
+[Python Tutorial](https://docs.python.org/3/tutorial/index.html)
 
 ## Fibonacci Numbers
 
