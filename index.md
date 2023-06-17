@@ -236,7 +236,7 @@ IndexError: list index out of range
 
 At this point, we have covered many of the important beginniner concepts, but there is still much more to Python. Use the tutorials here to learn more programming tools:
 
-[Python Tutorial - W3Schools (Recommended)](https://www.w3schools.com/python/python_getstarted.asp)
+[Python Tutorial - W3Schools (Recommended)](https://www.w3schools.com/python/python_getstarted.asp)  
 [Python Tutorial](https://docs.python.org/3/tutorial/index.html)
 
 ## Fibonacci Numbers
