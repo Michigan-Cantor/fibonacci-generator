@@ -311,7 +311,7 @@ Time to write some code! Open up our folder in your IDE. You should see *fib.py*
 Our goal is to generate Fibonacci Numbers, a sequence of numbers where each number is the sum of the two preceding. In programming, *loops* are a great tool for performing iterative tasks. Let's copy the code from section 3.2 of the [Python Tutorial](https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming) to generate the Fibonacci Numbers that are under 10:
 
 ```python
-1 a, b = 0, 1
+1 a, b = 1, 1
 2 while a < 10:
 3     print(a)
 4     a, b = b, a+b
@@ -321,7 +321,6 @@ Once we save (Cmd-S, Ctrl-S, or File->Save), we should be able to run our progra
 
 ```console
 % python3 fib.py
-0
 1
 1
 2
@@ -360,7 +359,7 @@ Now may be a good time to push to git! Take a look at the [Version Control](http
 What if we wanted to determine the number of digits printed a different way? We could use a *for-loop*:
 
 ```python
-a, b = 0, 1
+a, b = 1, 1
 for i in range(0, 10):
     print(a)
     a, b = b, a+b
@@ -383,7 +382,7 @@ Let's put our code inside a function.
 
 ```python
 def main():    
-    a, b = 0, 1
+    a, b = 1, 1
     for i in range(0, 10):
         print(a)
         a, b = b, a+b
@@ -394,7 +393,7 @@ If we try running our program again, we should no longer get any output. This ma
 
 ```python
 def main():    
-    a, b = 0, 1
+    a, b = 1, 1
     for i in range(0, 10):
         print(a)
         a, b = b, a+b
@@ -408,7 +407,6 @@ main()
 
 ```console
 % python3 fib.py
-0
 1
 1
 2
@@ -418,6 +416,7 @@ main()
 13
 21
 34
+55
 ```
 
 ### User Input
@@ -433,7 +432,7 @@ Functions can return values (or not). The ```input()``` function returns a value
 ```python
 def main():  
     num_terms = input("Enter number of Fibonacci terms: ")
-    a, b = 0, 1
+    a, b = 1, 1
     for i in range(0, 10):
         print(a)
         a, b = b, a+b
@@ -451,7 +450,6 @@ Run our program again. You should be able to provide input, but the remaining be
 ```console
 % python3 fib.py
 Enter number of Fibonacci terms: 21
-0
 1
 1
 2
@@ -461,6 +459,7 @@ Enter number of Fibonacci terms: 21
 13
 21
 34
+55
 ```
 
 Regardless of our input, we have only stored our input in a variable. We have not used it to alter the behavior of our program in any way, so we should not expect it to control the number of terms printed yet. Once we validate our input, we can use it to influence the behavior of our program.
@@ -514,7 +513,7 @@ Inside the if-block, we can assume that our ```num_terms``` variable contains a 
 ```python
  5     if valid:
  6         num_terms = int(num_terms)
- 7         a, b = 0, 1
+ 7         a, b = 1, 1
  8         for i in range(0, num_terms):
  9             print(a)
 10             a, b = b, a+b
@@ -530,7 +529,7 @@ def main():
 
     if valid:
         num_terms = int(num_terms)
-        a, b = 0, 1
+        a, b = 1, 1
         for i in range(0, num_terms):
             print(a)
             a, b = b, a+b
@@ -566,7 +565,7 @@ def main():
 
     if valid:
         num_terms = int(num_terms)
-        a, b = 0, 1
+        a, b = 1, 1
         for i in range(0, num_terms):
             print(a)
             a, b = b, a+b
@@ -594,7 +593,7 @@ def main():
 
     if valid:
         num_terms = int(num_terms)
-        a, b = 0, 1
+        a, b = 1, 1
 
         # Loop iterates for the requested number of terms
         for i in range(0, num_terms):
